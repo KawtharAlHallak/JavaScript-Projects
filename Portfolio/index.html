@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Kawthar AlHallak</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="Background">
+
+  <!-- Navbar -->
+  <div class="Navbar">
+    <a class="active" href="#Home">Home</a>
+    <a href="#Slideshow">Slideshow</a>
+    <a href="#About">About</a>
+    <a href="#GitHub">GitHub</a>
+    <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+  </div>
+
+  <!-- Background Video -->
+  <div id="Home">
+    <video autoplay muted loop id="Typing_Video">
+      <source src="https://cdn.pixabay.com/video/2022/10/24/136284-764387740_tiny.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Video Text -->
+  <div class="Video_Text">
+    <h1 class="white-text">Kawthar AlHallak's Portfolio</h1>
+    <strong>
+      <p class="center quote">
+        <q>Code is not just logic—it's art, expression, and possibility. Each line can build tools, tell stories, and change lives.</q>
+        <br>– Kawthar AlHallak<br><br>
+        Hello! I'm Kawthar AlHallak, a passionate student developer who believes in the power of creativity and code.
+        <br><br>
+        This portfolio is a window into my journey as I continue to grow my skills in full-stack development, design, and problem-solving.
+        <br><br>
+        Thank you for stopping by—I hope you find something here that inspires you!
+      </p>
+    </strong>
+  </div>
+
+  <!-- Slideshow -->
+  <div id="Slideshow">
+    <div id="Slideshow_Background">
+      <div id="Slideshow_Container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_1280.jpg">
+          <div class="text">Let’s create something amazing together!</div>
+        </div>
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png">
+          <div class="text">Passionate about HTML, CSS, and clean UI</div>
+        </div>
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg">
+          <div class="text">Python enthusiast with an eye for data</div>
+        </div>
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/12/09/15/51/code-1084923_1280.png">
+          <div class="text">Exploring backend logic with C# and ASP.NET</div>
+        </div>
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg">
+          <div class="text">Lover of databases, queries, and problem solving</div>
+        </div>
+        <div class="mySlides fade">
+          <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg">
+          <div class="text"><a class="white-text contact" onclick="openForm()">Let’s connect and build together!</a></div>
+        </div>
+        <!-- Navigation -->
+        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="Row" id="About">
+    <div class="Column_2">
+      <img src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg" alt="Laptop">
+    </div>
+    <div class="Column_1">
+      <h1>About Me</h1>
+      <p>
+        My name is Kawthar AlHallak. I'm a student developer with a love for turning ideas into interactive digital experiences.
+        <br><br>
+        I'm currently diving deep into the world of full-stack development, learning how to create both beautiful frontends and powerful backends.
+        I’ve studied technologies like HTML, CSS, JavaScript, Python, C#, and SQL.
+        <br><br>
+        My goal? To build tools that make life easier, more creative, and more fun.
+        <br><br>
+        <a onclick="openForm()" class="contact">Reach out—I'd love to hear from you!</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- GitHub Section -->
+  <div class="Row" id="GitHub">
+    <div class="Column_1">
+      <h1>GitHub</h1>
+      <p>Explore some of the cool projects I’ve been working on:</p>
+      <p class="center"><a href="https://github.com/KawtharAlHallak" target="_blank">My GitHub</a></p>
+    </div>
+    <div class="Column_2">
+      <a href="https://github.com/KawtharAlHallak" target="_blank">
+        <img src="https://cdn.pixabay.com/photo/2021/09/23/06/59/github-6648895_1280.jpg" alt="GitHub Logo">
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="Contact">
+    <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+    <div class="form-popup" id="myForm" ondblclick="closeForm()">
+      <form action="" method="POST" class="form-container">
+        <h1>Contact Me</h1>
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Type your name here" name="name" required>
+        <label for="phone"><b>Phone</b></label>
+        <input type="text" placeholder="Type your phone number here" name="phone">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Type your email address here" name="email" required>
+        <label for="message"><b>Message</b></label>
+        <input type="text" placeholder="Type your message here" name="message">
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="center">&copy; Kawthar AlHallak —
+      <a href="https://github.com/KawtharAlHallak" target="_blank">Visit My GitHub</a>
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
